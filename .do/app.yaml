@@ -1,6 +1,25 @@
 name: nosuchgarik
 region: fra
 
+features:
+  - buildpack-stack=ubuntu-22
+
+domains:
+  - domain: nosuchgarik.com.ua
+    type: PRIMARY
+    zone: nosuchgarik.com.ua
+  - domain: www.nosuchgarik.com.ua
+    type: ALIAS
+    zone: nosuchgarik.com.ua
+
+ingress:
+  rules:
+    - component:
+        name: site
+      match:
+        path:
+          prefix: /
+
 static_sites:
   - name: site
     github:
@@ -10,5 +29,3 @@ static_sites:
     source_dir: /
     index_document: index.html
     error_document: 404.html
-    routes:
-      - path: /
