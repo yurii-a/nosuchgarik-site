@@ -90,9 +90,14 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <img class="hero-bg" src="assets/instagram/post-05.jpg"
-         alt="Гарік Носач у чорному кітелі з прапорами Естонії та України тримає тарілку з авторською стравою"
-         fetchpriority="high">
+    <picture>
+      <source type="image/webp" media="(max-width: 720px)" srcset="assets/hero/hero-mobile.webp">
+      <source type="image/webp" srcset="assets/hero/hero-2000.webp">
+      <source media="(max-width: 720px)" srcset="assets/hero/hero-mobile.jpg">
+      <img class="hero-bg" src="assets/hero/hero-2000.jpg"
+           alt="Гарік Носач у чорному кітелі зосереджено заправляє соусом десятки порційних піал на професійній кухні"
+           fetchpriority="high">
+    </picture>
     <div class="wrap">
       <p class="kicker">Фуд-креатор · Pop-up шеф · Топ-8 МастерШеф 16</p>
       <h1>Гарік Носач</h1>
